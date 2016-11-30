@@ -15,7 +15,6 @@ fn main() {
         Ok(v) => {
             for ip in v {
                 println!("{}", ip);
-
             }
         }
         Err(err) => {

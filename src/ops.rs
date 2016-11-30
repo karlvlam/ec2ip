@@ -17,9 +17,7 @@ pub fn get_ec2_ips(pattern: &str) -> Result<Vec<String>, rusoto::ec2::DescribeIn
         next_token: None
     };
 
-
     let result = client.describe_instances(&opt);
-
 
     match result {
         Ok(result) => {
@@ -31,7 +29,7 @@ pub fn get_ec2_ips(pattern: &str) -> Result<Vec<String>, rusoto::ec2::DescribeIn
                         //println!("{}", ip);
                         ip.to_string()
                     }
-                    _ => "abc".to_string()
+                    _ => "".to_string()
                 }
             }).collect();
             Ok(v)
