@@ -4,4 +4,4 @@ version = "0.1.0"
 authors = ["Karl Lam <karl.v.lam@gmail.com>"]
 
 [dependencies]
-rusoto = {version = "0.19.1", features = ["ec2"]}
+rusoto = {version = "0.20.0", features = ["ec2"]}
