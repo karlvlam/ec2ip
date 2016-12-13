@@ -11,9 +11,11 @@ fn main() {
         process::exit(1);
     }
 
+
+
     match ops::get_ec2_ips(&args[1]) {
         Ok(v) => {
-            for ip in v {
+            for ip in &v {
                 println!("{}", ip);
             }
         }
